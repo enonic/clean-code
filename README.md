@@ -7,6 +7,8 @@ Clean Code concepts adapted for the Enonic projects.
 
 1. [Introduction](#introduction)
 2. [Git](#git)
+   * [Commits](#commits)
+   * [Pull Requests](#pull-requests)
 3. [TypeScript](#typescript)
    * [Variables](#variables)
    * [Functions](#functions)
@@ -22,9 +24,70 @@ It's recommended to read the following first:
 
 * [Clean Code][3] by Robert C. Martin;
 * [Clean Code JavaScript][4] adaptation by [Ryan McDermott][5];
-* [Clean Code TypeScript][6] adaptation by [Labs42][7].
+* [Clean Code TypeScript][6] adaptation by [Labs42][7];
+* [Pro Git][8] Book;
+* [Git Commit][9] article by [Chris Beams][10].
 
 ## **Git**
+
+This part describes the rules of the Enonic workflow while working with Git. For the detailed overview of the basic commit principles see the separate [article][9].
+
+## Commits
+
+### Use issue title as commit subject
+
+**Bad:**
+
+```bash
+git commit -m "Changes to confirmation dialog"
+```
+
+**Good:**
+
+```bash
+git commit -m "Confirmation not working #77"
+```
+
+### Non-task commit subject must be short, descriptive, and neutral
+
+The sentence "*Applying this commit will* \*commit subject\*" must make sense.
+
+**Bad:**
+
+```bash
+git commit -m "fixed console errors."
+```
+
+**Good:**
+
+```bash
+git commit -m "Fix exception on dialog initial load"
+```
+
+## Pull Requests
+
+### Add the same person to Reviewers and Assignees lists
+
+When you create a Pull Request and know exactly who should review it, add this person both to the Reviewers and Assignees lists.
+
+**Bad:**
+
+```
+Reviewers:
+  - John Smith
+
+Assignees:
+```
+
+**Good:**
+
+```
+Reviewers:
+  - John Smith
+
+Assignees:
+  - John Smith
+```
 
 ## **TypeScript**
 
@@ -107,5 +170,8 @@ const dialog = new ModalDialog({title, closeCallback});
 [5]: https://github.com/ryanmcdermott
 [6]: https://github.com/labs42io/clean-code-typescript
 [7]: https://github.com/labs42io
+[8]: https://git-scm.com/book/
+[9]: https://chris.beams.io/posts/git-commit/
+[10]: https://github.com/cbeams
  [base-license-url]: http://creativecommons.org/licenses/by-nc-nd/4.0/
 [base-license-image]: http://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-sa.svg
