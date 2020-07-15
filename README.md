@@ -89,6 +89,30 @@ Assignees:
   - John Smith
 ```
 
+### Add at least two reviewers
+
+When you create a Pull Request consider adding at least two reviewers to it, and avait both to complete a review. It is not always possible but desireable for team knowlage sharing.
+
+**Bad:**
+
+```
+Reviewers:
+  - John Smith
+```
+
+**Good:**
+
+```
+Reviewers:
+  - John Smith
+  - Jaine Doe
+```
+
+### Pool request for a bugfix
+
+- First bugfix pool request should allways be issued for the master branch (bugfix branch should have a name `issue-{issue#}` ex. `issue-1234`)
+- After Pool Request was approved and merged into master branch create separate pool request for all version branches this fix should be applied to (branches should have a name `issue-{issue#}-{version#}` ex. `issue-1234-7.3`)
+
 ## **TypeScript**
 
 ## Variables
