@@ -119,11 +119,12 @@ Example: Bug #8225 has to be fixed in supported versions 6.15, 7.2 and 7.3
 - Create a PR from issue-8225 branch
 - Assign reviewers
 - Wait for reviewes to approve PR
-- Rebase and merge PR into master
-- Create a backprot branch `issue-8225-6.15` based on 6.15 branch and PR with a fix
-- Create a backprot branch `issue-8225-7.2` based on 7.2 branch and PR with a fix
-- Create a backprot branch `issue-8225-7.3` based on 7.3 branch and PR with a fix
-- Owners rebase and merge individual PRs indo corresponding branches 
+- Rebase and merge PR into master. Delete branch if not deleted automatically.
+- Create a backprot branch `issue-8225-6.15` based on 6.15 version branch and PR with a fix
+- Create a backprot branch `issue-8225-7.2` based on 7.2 version branch and PR with a fix
+- Create a backprot branch `issue-8225-7.3` based on 7.3 version branch and PR with a fix
+- Assign repository owner (administrator) for review on each PR
+- Owners rebase merge and delete individual PRs into corresponding version branches.
 
 ## **TypeScript**
 
