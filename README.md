@@ -113,6 +113,18 @@ Reviewers:
 - First bugfix pool request should allways be issued for the master branch (bugfix branch should have a name `issue-{issue#}` ex. `issue-1234`)
 - After Pool Request was approved and merged into master branch create separate pool request for all version branches this fix should be applied to (branches should have a name `issue-{issue#}-{version#}` ex. `issue-1234-7.3`)
 
+Example: Bug #8225 has to be fixed in supported versions 6.15, 7.2 and 7.3
+
+- Create a branch issue-8225 based on master
+- Create a PR from issue-8225 branch
+- Assign reviewers
+- Wait for reviewes to approve PR
+- Rebase and merge PR into master
+- Create a backprot branch `issue-8225-6.15` based on 6.15 branch and PR with a fix
+- Create a backprot branch `issue-8225-7.2` based on 7.2 branch and PR with a fix
+- Create a backprot branch `issue-8225-7.3` based on 7.3 branch and PR with a fix
+- Owners rebase and merge individual PRs indo corresponding branches 
+
 ## **TypeScript**
 
 ## Variables
