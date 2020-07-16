@@ -50,6 +50,8 @@ git commit -m "Confirmation not working #77"
 
 ### Non-task commit subject must be short, descriptive, and neutral
 
+:warning: Avoid non-task commits.
+
 The sentence "*Applying this commit will* \*commit subject\*" must make sense.
 
 **Bad:**
