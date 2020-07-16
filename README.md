@@ -112,8 +112,9 @@ Reviewers:
 
 ### Pool request for a bugfix
 
-- First bugfix pool request should allways be issued for the master branch (bugfix branch should have a name `issue-{issue#}` ex. `issue-1234`)
-- After Pool Request was approved and merged into master branch create separate pool request for all version branches this fix should be applied to (branches should have a name `issue-{issue#}-{version#}` ex. `issue-1234-7.3`)
+First bugfix pool request should allways be issued for the master branch (bugfix branch should have a name `issue-{issue#}` ex. `issue-1234`).
+After Pool Request was approved and merged into master branch create separate pool request for all version branches this fix should be applied to (branches should have a name `issue-{issue#}-{version#}` ex. `issue-1234-7.3`)
+Bugfix pool request must be one-commit. Sqash miltiplie commits into one before and after Pool request review adjustments.
 
 Example: Bug #8225 has to be fixed in supported versions 6.15, 7.2 and 7.3
 
